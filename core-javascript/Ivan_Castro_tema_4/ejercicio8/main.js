@@ -6,13 +6,13 @@ function imprimirImpares() {
     let ristraDeNumeros = "";
 
     for (let i = 1; i < valor; i++) {
-        if (i % 2 == 0) {
+        if (i % 2 == 1) {
             ristraDeNumeros += (`${i}, `);
         } else {
             continue;
         }
     }
-    ristraDeNumeros += ("FIN DE LA RISTRA DE PARES :D")
+    ristraDeNumeros += ("FIN DE LA RISTRA DE IMPARES :D")
     document.write(ristraDeNumeros);
 }
 

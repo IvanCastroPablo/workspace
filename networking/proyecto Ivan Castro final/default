@@ -1,0 +1,118 @@
+server {
+    # Ejercicio 1
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    access_log /var/www/html/logs.log;
+
+    root /var/www/html;
+
+    index index.html index.htm index.nginx-debian.html;
+
+    # Ejercicio 15
+    location /logs.log {
+        alias /var/www/html/logs.log;
+        allow all;
+    }
+
+    server_name _;
+
+    #Ejercicio 2
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    #Ejercicios 3, 4, 5 y 6 se comprueban desde explorador
+    
+    #Ejercicio 7
+    location /error {
+        return 500;
+    }
+
+    #Ejercicio 8.
+    location /metodo {
+        if ($request_method = GET) {
+            return 201 '{"codigo":"1", "mensaje":"Es un GET"}';
+        }
+        if ($request_method = POST) {
+            return 201 '{"codigo":"1", "mensaje":"Es un POST"}';
+        }
+        if ($request_method = PUT) {
+            return 201 '{"codigo":"1", "mensaje":"Es un PUT"}';
+        }
+        if ($request_method = DELETE) {
+            return 201 '{"codigo":"1", "mensaje":"Es un DELETE"}';
+        }
+        return 403 "Método no permitido";
+    }
+
+    # Ejercicio 9
+    location /cabecera {
+        add_header Bananas "verdes";
+        return 204;
+    }
+
+    # Ejercicio 10
+    location /redireccion1 {
+        return 302 https://w3schools.com;
+    }
+
+    # Ejercicio 11
+    location /redireccion2 {
+        return 302 http://0.0.0.0/cabecera;
+    }
+
+    # Ejercicio 14
+    location /respuesta {
+        if ($arg_json) {
+            return 200 '{"codigo": "200", "mensaje": "Has solicitado un JSON"}';
+        }
+        if ($arg_html) {
+            return 200 '<html><body><h1>Has solicitado un HTML</h1></body></html>';
+        }
+        return 404 "No hay galletas";
+    }
+}
+
+# Ejercicio 12
+# servidor en el puerto 8000
+server {
+    listen 8000;
+    access_log /var/www/html/logs.log;
+
+    index index.html index.htm index.nginx-debian.html;
+
+    root /var/www/html;
+
+    location / {
+        try_files $uri $uri/ =403;
+    }
+    # Ejercicio 15
+    location /logs.log {
+        alias /var/www/html/logs.log;
+        allow all;
+    }
+}
+
+# Ejercicio 13
+server {
+    listen 443;
+    ssl on;
+    server_name 0.0.0.0;
+    ssl_certificate /etc/nginx/certs/certificadopublico.pem;
+    ssl_certificate_key /etc/nginx/certs/contraseña.pem;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    root /var/www/html;
+    index index.html index.htm index.nginx-debian.html;
+    location / {
+    try_files $uri $uri/ =404;
+    }
+    # Ejercicio 15
+    location /logs.log {
+        alias /var/www/html/logs.log;
+        allow all;
+    }
+    #el user y contraseña es "usuario" y "Pamplona"
+    auth_basic "Acceso Restringido";
+    auth_basic_user_file /etc/nginx/.htpasswd;
+}
