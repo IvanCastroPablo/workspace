@@ -5,7 +5,6 @@ let diametro, grosor;
 function obtenerMedidas() {
     diametro = parseFloat(prompt("Introduzca el diámetro de su rueda en metros: "));
     grosor = parseFloat(prompt("Introduzca el grosor de su rueda en metros: "));
-
     
     if (diametro > 0 && grosor > 0) {
         return 1;
