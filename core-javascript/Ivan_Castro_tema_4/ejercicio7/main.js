@@ -1,4 +1,4 @@
-// Página web ejecutada en bucle infinito que pregunta por unavmultiplicación y te responde con la solución mientras te vuelve a preguntar de nuevo.
+// Página web ejecutada en bucle infinito que pregunta por una multiplicación y te responde con la solución mientras te vuelve a preguntar de nuevo.
 
 function multiplicacionRecursiva() {
     let multiplicando = parseFloat(prompt("Proporciona multiplicando"));  // Convertir a número
