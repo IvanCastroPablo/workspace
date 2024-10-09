@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>CONVERSOR</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 20px;
+                background-color: rgb(75, 212, 233);
+            }
+            .contenedor {
+                width: 50%;
+            }
+            .imagen_derecha {
+                width: 40%;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                background-color: rgb(75, 212, 233);
+            }
+        </style>    
+    </head>
+<body>
+    <div class="contenedor">
+        <h1>Conversor de Temperaturas</h1>
+        
+        <label for="temperatura">Introduce la temperatura: </label>
+        <input type="text" id="temperatura" placeholder="Temperatura" />
+
+        <br><br>
+
+        <label for="conversion">Selecciona la conversión:</label>
+        <select id="conversion">
+            <option value="1">Fahrenheit a Celsius</option>
+            <option value="2">Celsius a Fahrenheit</option>
+            <option value="3">Ambas conversiones</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="seleccion()">Convertir</button>
+
+        <br><br>
+
+        <p id="resultado"></p>
+    </div>
+
+    <div class="imagen_derecha">
+        <img src="termometro_imagen.png" alt="imagen de referencia">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
