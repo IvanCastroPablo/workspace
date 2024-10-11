@@ -1,15 +1,18 @@
-function createObject(name, subs) {
-    const persona = {
-      name: name, 
-      subs: subs, 
-      hash: name.length * subs,
-      getStatus: function () {
-        return (`El canal de ${this.name} tiene ${this.subs} suscriptores.`)
-      }
-    }
-    return persona;
-  }  
 
+function coordenadaZ(x, y) {
+  x = x + 10;
+  y = x + 15;
+  return x + y;
+}
 
+let x = parseInt(prompt("Coordenada eje x: "))
+let y = parseInt(prompt("Coordenada eje y: "))
+let z;
 
-console.log(createObject("Miguel", 100).hash);
+for (let i = 0; i < 3; i++) {
+  z = coordenadaZ(x, y);
+  x = x + 1;
+  y = y + 1;
+}
+
+alert(x + " . " + y)
