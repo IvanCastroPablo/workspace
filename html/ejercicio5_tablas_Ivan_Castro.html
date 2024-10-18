@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        Table, td, th {
+            border: black 1px solid;
+        }
+
+        #verde {
+            background-color: greenyellow;
+        }
+
+        #color_dias_lectivos {
+            background-color: bisque;
+        }
+
+        #rojito {
+            background-color: rgb(255, 0, 0);
+        }
+
+        #rosita {
+            background-color: rgb(255, 161, 161);
+        }
+
+        #amarillo {
+            background-color: gold;
+        }
+
+        #azul_formacion {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <p><small>Mi horario agile inventado:</small></p>
+    <table>
+		<!--FILA 1-->
+		<tr>
+			<th id="verde">Horario</th>
+			<th id="color_dias_lectivos"><b>LUNES</b></th>
+			<th id="color_dias_lectivos"><b>MARTES</b></th>
+            <th id="color_dias_lectivos"><b>MIÉRCOLES</b></th>
+            <th id="color_dias_lectivos"><b>JUEVES</b></th>
+            <th id="color_dias_lectivos"><b>VIERNES</b></th>
+		</tr>
+
+		<!--FILA 2-->
+		<tr>
+			<td id="verde">08-09</td>
+			<td id="rojito" rowspan="2"><i>Sprint Planning</i></td>
+			<td id="rosita"><i>daily scrum</i></td>
+            <td id="rosita"><i>daily scrum</i></td>
+            <td id="rosita"><i>daily scrum</i></td>
+            <td id="rosita"><i>daily scrum</i></td>
+		</tr>
+
+		<!--FILA 3-->
+		<tr>
+			<td id="verde">09-10</td>
+			<td></td>
+            <td></td>
+            <td></td>
+            <td id="azul_formacion">Formación</td>
+		</tr>
+
+        <tr>
+			<td id="verde">10-11</td>
+			<td></td>
+			<td></td>
+            <td></td>
+            <td id="azul_formacion">Formación</td>
+            <td></td>
+		</tr>
+
+        <tr>
+			<td id="verde">11-11:30</td>
+            <td id="amarillo" colspan="5">Almuerzo</td>
+		</tr>
+
+        <tr>
+			<td id="verde">11:30-12:30</td>
+			<td id="azul_formacion">Formación</td>
+			<td></td>
+            <td></td>
+            <td></td>
+            <td id="rojito" rowspan="2"><i>sprint review</i></td>
+		</tr>
+
+        <tr>
+			<td id="verde">11:30-12:30</td>
+			<td></td>
+			<td></td>
+            <td id="azul_formacion">Formación</td>
+            <td></td>
+
+		</tr>
+
+        <tr>
+			<td id="verde">11:30-12:30</td>
+			<td></td>
+			<td id="azul_formacion">Formación</td>
+            <td></td>
+            <td></td>
+            <td id="rojito"><i>sprint retrospective</i></td>
+		</tr>
+    </table>
+</body>
+</html>

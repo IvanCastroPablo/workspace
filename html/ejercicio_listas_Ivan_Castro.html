@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+
+        ol {
+        list-style-type: decimal;
+        }
+
+        #Segunda_lista {
+            list-style-type: "☠️";
+        }
+
+        #Segunda_lista li:last-child::marker {
+            content: '✔️ ';
+            font-size: 1em;
+            color: rgb(255, 0, 208);
+        }
+
+        #Primera_lista li:nth-child(odd) {
+            background-color: grey;
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Corredores a partir del undécimo (20):</h3>
+    <!-- listas ordenadas-->
+    <ol id="Primera_lista">
+        <li value="20"> Juanita </li>
+        <li> Pepito </li>
+        <li> Jaimito </li>
+        <li> EL CRISTO DEL GRAN PODER </li>
+        <li> Nombre </li>
+        <li> Nombre </li>
+        <li> Nombre </li>
+        <li> Nombre </li>
+        <li> Nombre </li>
+    </ol>
+
+    <h3>Versiones de HTML:</h3>
+
+    <ol id="Segunda_lista">
+        <li>HTML 1</li>
+        <li>HTML 2</li>
+        <li>HTML 3</li>
+        <li>HTML 4</li>
+        <li>HTML 5</li>
+    </ol>
+    
+</body>
+</html>

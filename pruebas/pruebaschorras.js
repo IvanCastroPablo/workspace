@@ -1,18 +1,12 @@
-
-function coordenadaZ(x, y) {
-  x = x + 10;
-  y = x + 15;
-  return x + y;
+function* asdf() {
+  yield 1;
+  yield 2;
+  return 3;
 }
 
-let x = parseInt(prompt("Coordenada eje x: "))
-let y = parseInt(prompt("Coordenada eje y: "))
-let z;
+let qwerty = asdf();
 
-for (let i = 0; i < 3; i++) {
-  z = coordenadaZ(x, y);
-  x = x + 1;
-  y = y + 1;
-}
+console.log(qwerty.next())
+console.log(qwerty.next())
+console.log(qwerty.next())
 
-alert(x + " . " + y)

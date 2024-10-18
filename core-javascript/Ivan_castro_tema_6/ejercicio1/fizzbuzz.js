@@ -28,4 +28,8 @@ module.exports = {
 
 // NODE TESTING
 
-// como en otras ocasiones, el código pasa por más de un filtro. En este caso he escogido
+console.log(fizzbuzz(15))
+console.log(fizzbuzz(20))
+console.log(fizzbuzz(9))
+console.log(fizzbuzz(0))
+console.log(fizzbuzz("ASDF"))

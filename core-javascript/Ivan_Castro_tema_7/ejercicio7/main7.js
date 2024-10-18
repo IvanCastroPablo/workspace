@@ -5,7 +5,7 @@ let multiplicando, longitud;
 
 function modificar_array(array, multiplicando) {
     for (let i = 0; i < array.length; i++) {
-        array[i] = (` ${((i + 1) * multiplicando).toFixed(2)}`);
+        array[i] = (` ${((i + 1) * multiplicando)}`);
     }
 }
 
@@ -18,7 +18,7 @@ function obtener_array() {
 }
 
 function obtener_multiplicando() {
-    multiplicando = parseFloat(document.getElementById("multiplicando").value);
+    multiplicando = parseInt(document.getElementById("multiplicando").value);
     return 1;
 }
 
