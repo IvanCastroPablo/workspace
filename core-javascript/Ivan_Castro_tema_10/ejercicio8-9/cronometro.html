@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronómetro</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cajones {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #cajones input {
+            width: 170px;
+            background-color: chartreuse;
+            font-size: xx-large;
+            font-family: sans-serif;
+        }
+
+        #botones {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        #botones button {
+            background-color: aqua;
+            font-family: sans-serif;
+            font-size: xx-large;
+        }
+    </style>
+    <script src="cronometro.js"></script>
+</head>
+<body>
+    <div id="cajones">
+        <input id="horas" placeholder="00">
+        <input id="minutos" placeholder="00">
+        <input id="segundos" placeholder="00">
+        <br>
+    </div>
+    <div id="botones">
+        <button onclick="iniciarCronometro()"><strong>INICIAR</strong></button>
+        <button onclick="parar()"><strong>PARAR/CONTINUAR</strong></button>
+        <button onclick="reiniciarDOM()"><strong>REINICIAR</strong></button>
+        <br>
+    </div>
+</body>
+</html>
