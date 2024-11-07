@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    .my_caja {
+        border-style: solid;
+        border-width: 1px;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-color: #5500ff;
+        transition: width 2s, height 2s, transform 2s, background-color 2s;
+        transition: cubic-bezier(1, 0.62, 0, 2.07) 2s;
+       }
+
+    .my_caja:hover {
+        background-color: rgb(127, 127, 127);
+        width: 2000px;
+        height: 2000px;
+        transform: rotate(180deg);
+       }
+
+    </style>
+</head>
+<body>
+    <div class="my_caja"> </div>
+</body>
+</html>

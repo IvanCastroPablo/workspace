@@ -7,7 +7,7 @@ function imprimirImpares() {
 
     for (let i = 1; i < valor; i++) {
         if (i % 2 == 1) {
-            ristraDeNumeros += (`${i}, `);
+            ristraDeNumeros += `${i}, `;
         } else {
             continue;
         }

@@ -31,15 +31,35 @@
 
         #azul_formacion {
             background-color: aqua;
+            font-size: x-small;
         }
+        
+        #centrar {
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        .notbold{
+            font-weight:normal
+        }
+
+        #titulo {
+            margin-bottom: 0px;
+        }
+
+        #tabla {
+            margin-top: 0px;
+        }
+    ​
     </style>
 </head>
 <body>
-    <p><small>Mi horario agile inventado:</small></p>
-    <table>
+    <p id="titulo"><small>Mi horario agile inventado:</small></p>
+    <div id="centrar">
+    <table id="tabla">
 		<!--FILA 1-->
 		<tr>
-			<th id="verde">Horario</th>
+			<th id="verde"><span class='notbold'>Horario</span></th>
 			<th id="color_dias_lectivos"><b>LUNES</b></th>
 			<th id="color_dias_lectivos"><b>MARTES</b></th>
             <th id="color_dias_lectivos"><b>MIÉRCOLES</b></th>
@@ -107,5 +127,6 @@
             <td id="rojito"><i>sprint retrospective</i></td>
 		</tr>
     </table>
+    </div>
 </body>
 </html>

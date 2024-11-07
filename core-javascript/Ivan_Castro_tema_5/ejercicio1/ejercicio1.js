@@ -6,6 +6,7 @@ function fibonacci(num){
     }
     return index[0];
 }
+
 // He decidido incluir BigInt() porque no me parece aceptable obtener números aproximados. Esto afecta al rendimiento negativamente.
 
 function fibonacci_good(num) {

@@ -9,3 +9,6 @@ for (decreciente; decreciente > 0; decreciente--) {
 }
 
 document.write(texto_invertido);
+
+
+frase -= frase[frase.length]
