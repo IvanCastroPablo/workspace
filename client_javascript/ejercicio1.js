@@ -23,5 +23,7 @@ if (navbarBg) {
 
 
 let miEtiqueta = document.createElement("p");
-// Insertar el nuevo párrafo al inicio del elemento destino
-navbarBg.prepend(miEtiqueta); 
+miEtiqueta.textContent = "Nuevo elemento en el DOM encima del previo"; // Agregar texto al párrafo
+
+// Usar prepend para insertar el nuevo párrafo dentro del contenedor `navbarBg`
+navbarBg.prepend(miEtiqueta);
